@@ -1,0 +1,13 @@
+name: 'Stack and GLPK'
+description: 'Run commands in a container with Stack and GLPK installed'
+
+inputs:
+  commands:
+    description: 'The shell commands to run'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.commands }}
